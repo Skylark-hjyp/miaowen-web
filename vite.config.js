@@ -23,7 +23,7 @@ export default defineConfig({
                 changeOrigin: true, //是否跨域
                 ws: true, //是否代理 websockets
                 secure: true, //是否https接口
-                rewrite: (path) => path.replace(/^\/api/, ''),
+                // rewrite: (path) => path.replace(/^\/api/, ''),
                 // pathRewrite: {
                 //     '^/api': '' // 假如我们的地址是 /api/member/getToken 会转化为 /member/getToken
                 // },

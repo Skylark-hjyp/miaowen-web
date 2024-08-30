@@ -1,10 +1,19 @@
 import axios from 'axios'
 
-const http = axios.create({
+export const http = axios.create({
     // baseURL: 'http://',
     timeout: 6000,
     headers: {}
 })
+
+export function loadArticleList(page: number, pageSize: number) {
+    return http.get('/api/article/selectByPage', {
+        params: {
+            page: page,
+            pageSize: pageSize
+        }
+    })
+}
 
 const Api = {
     login: (name) => {
